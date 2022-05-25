@@ -20,6 +20,11 @@ targets:
     platform: iOS
     sources:
       - TraqClone
+    prebuildScripts:
+      - name: Run SwiftLint
+        script: |
+          /opt/homebrew/bin/swiftlint --fix --format
+          /opt/homebrew/bin/swiftlint
     settings:
     info:
       path: TraqClone/Info.plist
