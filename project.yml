@@ -1,0 +1,38 @@
+name: TraqClone
+
+options:
+  bundleIdPrefix: com.ras96
+  deploymentTarget: 
+    iOS: 15.0
+  xcodeVersion: "13.3"
+
+settings:
+  base:
+    DEVELOPMENT_TEAM: Ras
+    MARKETING_VERSION: 1.0.0
+    CURRENT_PROJECT_VERSION: 1
+    CLANG_CXX_LANGUAGE_STANDARD: gnu++17
+    CODE_SIGN_STYLE: Automatic
+
+targets:
+  TraqClone:
+    type: application
+    platform: iOS
+    sources:
+      - TraqClone
+    settings:
+    info:
+      path: TraqClone/Info.plist
+      properties:
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        LSRequiresIPhoneOS: YES
+        UILaunchScreen: ""
+        UIApplicationSupportsIndirectInputEvents: YES
+        UIApplicationSceneManifest: 
+          UIApplicationSupportsMultipleScenes: YES
+        UISupportedInterfaceOrientations~iphone:
+          [UIInterfaceOrientationPortrait, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
+        UISupportedInterfaceOrientations~ipad:
+          [UIInterfaceOrientationPortrait, UIInterfaceOrientationPortraitUpsideDown, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
+
